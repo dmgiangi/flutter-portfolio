@@ -1,0 +1,59 @@
+name: portfolio
+description: A simple portfolio made with flutter3.0 and dart
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^1.1.4
+  animated_text_kit: ^4.2.2
+  dev_icons: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat/Montserrat-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Montserrat/Montserrat-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Montserrat/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat/Montserrat-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Montserrat/Montserrat-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Montserrat/Montserrat-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Montserrat/Montserrat-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Montserrat/Montserrat-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Montserrat/Montserrat-Thin.ttf
+          weight: 100
+    - family: Hind
+      fonts:
+        - asset: assets/fonts/Hind/Hind-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Hind/Hind-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Hind/Hind-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Hind/Hind-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Hind/Hind-Light.ttf
+          weight: 300
