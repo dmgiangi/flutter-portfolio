@@ -9,7 +9,14 @@ import 'package:portfolio/section/about/components/years_of_experience_card.dart
 import '../../components/my_outline_button.dart';
 
 class About extends StatelessWidget {
-  const About({Key? key}) : super(key: key);
+  const About({
+    Key? key,
+    required this.reachSection,
+    required this.sectionKeys,
+  }) : super(key: key);
+
+  final Function reachSection;
+  final Map<String, GlobalKey<State<StatefulWidget>>> sectionKeys;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +57,9 @@ class About extends StatelessWidget {
                   size: size,
                   text: "Hire Me!",
                   icon: Icons.handshake_outlined,
-                  onPress: () {},
+                  onPress: () {
+                    reachSection(sectionKeys["Contact Me"]);
+                  },
                 ),
                 const SizedBox(width: kDefaultPadding * 3),
                 MyOutlineButton(

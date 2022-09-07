@@ -4,7 +4,14 @@ import 'package:portfolio/section/top/components/menu.dart';
 import 'components/glass_content.dart';
 
 class Top extends StatelessWidget {
-  const Top({Key? key}) : super(key: key);
+  const Top({
+    Key? key,
+    required this.reachSection,
+    required this.sectionKeys,
+  }) : super(key: key);
+
+  final Function reachSection;
+  final Map<String, GlobalKey<State<StatefulWidget>>> sectionKeys;
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +40,12 @@ class Top extends StatelessWidget {
                 child: Image.asset("assets/images/photo.png"),
               ),
             ),
-            const Positioned(
+            Positioned(
               bottom: 0,
-              child: Menu(),
+              child: Menu(
+                reachSection: reachSection,
+                sectionKeys: sectionKeys,
+              ),
             ),
           ],
         ));

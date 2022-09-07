@@ -7,7 +7,14 @@ import 'package:portfolio/data/recent_works.dart';
 import 'package:portfolio/section/works/components/recent_work_card.dart';
 
 class WorksWidget extends StatelessWidget {
-  const WorksWidget({Key? key}) : super(key: key);
+  const WorksWidget({
+    Key? key,
+    required this.reachSection,
+    required this.sectionKeys,
+  }) : super(key: key);
+
+  final Function reachSection;
+  final Map<String, GlobalKey<State<StatefulWidget>>> sectionKeys;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +36,11 @@ class WorksWidget extends StatelessWidget {
             children: [
               Transform.translate(
                 offset: const Offset(0, -120),
-                child: HireMeCard(size: size),
+                child: HireMeCard(
+                  size: size,
+                  sectionKeys: sectionKeys,
+                  reachSection: reachSection,
+                ),
               ),
               SectionTitle(
                 title: "Recent Works",

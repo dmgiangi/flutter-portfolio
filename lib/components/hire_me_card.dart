@@ -6,8 +6,13 @@ import 'package:portfolio/constants/constants.dart';
 class HireMeCard extends StatelessWidget {
   const HireMeCard({
     Key? key,
+    required this.reachSection,
+    required this.sectionKeys,
     required this.size,
   }) : super(key: key);
+
+  final Function reachSection;
+  final Map<String, GlobalKey<State<StatefulWidget>>> sectionKeys;
 
   final Size size;
 
@@ -60,7 +65,9 @@ class HireMeCard extends StatelessWidget {
           MyOutlineButton(
             text: "Hire Me!",
             icon: Icons.handshake,
-            onPress: () {},
+            onPress: () {
+              reachSection(sectionKeys["Contact Me"]);
+            },
             size: size,
           )
         ],

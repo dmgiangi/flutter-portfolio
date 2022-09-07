@@ -5,7 +5,12 @@ import 'package:portfolio/constants/constants.dart';
 class Menu extends StatefulWidget {
   const Menu({
     Key? key,
+    required this.reachSection,
+    required this.sectionKeys,
   }) : super(key: key);
+
+  final Function reachSection;
+  final Map<String, GlobalKey> sectionKeys;
 
   @override
   State<Menu> createState() => _MenuState();
@@ -14,17 +19,13 @@ class Menu extends StatefulWidget {
 class _MenuState extends State<Menu> {
   int selectedIndex = 0;
   int hoverIndex = -1;
-  List<String> menuItems = [
-    "Home",
-    "About",
-    "Services",
-    "Portfolio",
-    "Contact",
-  ];
+  late List<String> menuItems;
 
   @override
   Widget build(BuildContext context) {
+    menuItems = widget.sectionKeys.keys.toList(growable: false);
     var size = MediaQuery.of(context).size;
+
     return Container(
       height: 80,
       constraints:
@@ -54,6 +55,7 @@ class _MenuState extends State<Menu> {
         onTap: () {
           setState(() {
             selectedIndex = index;
+            widget.reachSection(widget.sectionKeys[menuItems[index]]);
           });
         },
         child: AnimatedDefaultTextStyle(
