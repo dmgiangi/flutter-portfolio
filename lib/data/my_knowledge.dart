@@ -17,7 +17,7 @@ List<Knowledge> knowledge = [
   Knowledge(
     title: "C",
     icon: DevIcons.cLine,
-    color: Colors.blue,
+    color: Colors.teal,
   ),
   Knowledge(
     title: "MySql",
@@ -45,8 +45,18 @@ List<Knowledge> knowledge = [
     color: Colors.yellow,
   ),
   Knowledge(
-    title: "Git & Github",
+    title: "Git",
+    icon: DevIcons.gitPlain,
+    color: Colors.redAccent,
+  ),
+  Knowledge(
+    title: "Github",
     icon: DevIcons.githubOriginal,
     color: Colors.redAccent,
+  ),
+  Knowledge(
+    title: "Docker",
+    icon: DevIcons.dockerPlain,
+    color: Colors.blue,
   ),
 ];

@@ -26,7 +26,7 @@ class Top extends StatelessWidget {
             GlassContent(size: size),
             Positioned(
               bottom: 00,
-              right: size.width > 1200 ? 50 : 3,
+              right: size.width > 1200 ? size.width * 0.1 : 3,
               child: Container(
                 constraints: BoxConstraints(
                     maxWidth: size.width * .9, maxHeight: size.height * .9),

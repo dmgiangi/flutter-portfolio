@@ -3,7 +3,7 @@ import 'package:portfolio/constants/constants.dart';
 import 'package:portfolio/data/my_knowledge.dart';
 import 'package:portfolio/section/know_how/components/knowledge_card.dart';
 
-import 'components/section_title.dart';
+import '../../components/section_title.dart';
 
 class KnowHow extends StatelessWidget {
   const KnowHow({Key? key}) : super(key: key);
@@ -28,7 +28,7 @@ class KnowHow extends StatelessWidget {
             SectionTitle(size: size, subTitle: subTitle, title: title),
             const SizedBox(height: kDefaultPadding * 2),
             GridView.count(
-              crossAxisCount: 3,
+              crossAxisCount: 4,
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               children: List.generate(
@@ -39,6 +39,7 @@ class KnowHow extends StatelessWidget {
                 ),
               ),
             ),
+            const SizedBox(height: kDefaultPadding * 8)
           ],
         ),
       ),

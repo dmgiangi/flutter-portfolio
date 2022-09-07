@@ -14,7 +14,7 @@ class KnowledgeCard extends StatefulWidget {
   final Size parentSize;
 
   @override
-  _KnowledgeCardState createState() => _KnowledgeCardState();
+  State<KnowledgeCard> createState() => _KnowledgeCardState();
 }
 
 class _KnowledgeCardState extends State<KnowledgeCard> {
@@ -35,8 +35,6 @@ class _KnowledgeCardState extends State<KnowledgeCard> {
         duration: duration,
         margin:
             EdgeInsets.all(kDefaultPadding * widget.parentSize.width * 0.0013),
-        //height: 256,
-        //width: 256,
         decoration: BoxDecoration(
           color: knowledge[widget.index].color[100],
           borderRadius: BorderRadius.circular(10),
@@ -54,8 +52,8 @@ class _KnowledgeCardState extends State<KnowledgeCard> {
           children: [
             AnimatedContainer(
               duration: duration,
-              padding: EdgeInsets.all(
-                  kDefaultPadding * 1.5 * widget.parentSize.width * 0.0007),
+              //padding: EdgeInsets.all(
+              //  kDefaultPadding * widget.parentSize.width * 0.001),
               decoration: BoxDecoration(
                 color: Colors.white,
                 shape: BoxShape.circle,
@@ -74,17 +72,21 @@ class _KnowledgeCardState extends State<KnowledgeCard> {
                     ),
                 ],
               ),
-              child: Icon(
-                knowledge[widget.index].icon,
-                size: widget.parentSize.width * 0.03,
-                color: MyColorScheme.dark,
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Icon(
+                  knowledge[widget.index].icon,
+                  size: widget.parentSize.width * 0.03,
+                  color: MyColorScheme.dark,
+                ),
               ),
             ),
             SizedBox(height: kDefaultPadding * widget.parentSize.width * 0.001),
             Text(
               knowledge[widget.index].title,
               style: TextStyle(
-                  fontSize: widget.parentSize.width * 0.018,
+                  fontWeight: FontWeight.w500,
+                  fontSize: widget.parentSize.width * 0.015,
                   color: MyColorScheme.dark),
             ),
           ],

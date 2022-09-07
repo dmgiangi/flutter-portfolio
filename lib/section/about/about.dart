@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
 import 'package:portfolio/data/data.dart';
+import 'package:portfolio/html_services.dart';
 import 'package:portfolio/section/about/components/about_and_sign.dart';
 import 'package:portfolio/section/about/components/about_text.dart';
 import 'package:portfolio/section/about/components/years_of_experience_card.dart';
 
-import 'components/my_outline_button.dart';
+import '../../components/my_outline_button.dart';
 
 class About extends StatelessWidget {
   const About({Key? key}) : super(key: key);
@@ -56,7 +57,9 @@ class About extends StatelessWidget {
                   size: size,
                   text: "Download CV",
                   icon: Icons.file_download_outlined,
-                  onPress: () {},
+                  onPress: () {
+                    openLink(link: cvLink);
+                  },
                 ),
               ],
             ),

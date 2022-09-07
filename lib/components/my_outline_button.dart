@@ -38,13 +38,13 @@ class MyOutlineButton extends StatelessWidget {
           Icon(
             icon,
             color: MyColorScheme.middle,
-            size: size.width * .025,
+            size: size.width * .03,
           ),
           const SizedBox(width: kDefaultPadding),
           Text(
             text,
             style: TextStyle(
-              fontSize: size.width * .010,
+              fontSize: size.width * .018,
               color: MyColorScheme.middle,
             ),
           )
