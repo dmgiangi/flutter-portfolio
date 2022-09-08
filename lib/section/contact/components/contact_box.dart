@@ -1,6 +1,7 @@
-import 'package:dev_icons/dev_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
+import 'package:portfolio/data/my_social.dart';
+import 'package:portfolio/html_services.dart';
 import 'package:portfolio/section/contact/components/contact_form.dart';
 import 'package:portfolio/section/contact/components/social_card.dart';
 
@@ -29,26 +30,18 @@ class ContactBox extends StatelessWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SocialCard(
-                color: Colors.cyan.shade200.withOpacity(0.4),
-                iconData: DevIcons.linkedinPlain,
-                name: 'LinkedIn',
-                press: () {},
+            children: List.generate(
+              mySocial.length,
+              (index) => SocialCard(
+                iconData: mySocial[index].iconData,
+                name: mySocial[index].name,
+                color: mySocial[index].color,
+                press: () async {
+                  openLink(link: mySocial[index].link);
+                },
+                size: size,
               ),
-              SocialCard(
-                color: Colors.blueAccent.shade200.withOpacity(0.4),
-                iconData: DevIcons.githubOriginal,
-                name: 'GitHub',
-                press: () {},
-              ),
-              SocialCard(
-                color: Colors.lightGreenAccent.shade400.withOpacity(0.4),
-                iconData: Icons.whatsapp,
-                name: 'WhatsApp',
-                press: () {},
-              ),
-            ],
+            ),
           ),
           const SizedBox(height: kDefaultPadding * 2),
           ContactForm(
