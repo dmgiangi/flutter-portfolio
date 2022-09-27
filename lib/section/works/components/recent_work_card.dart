@@ -27,82 +27,94 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: widget.onPress,
-      onHover: (value) {
-        setState(() {
-          isHover = value;
-        });
-      },
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        height: 320,
-        width: 540,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10),
-          boxShadow: [
-            if (isHover)
-              const BoxShadow(
-                blurRadius: 30,
-              )
-          ],
-        ),
-        child: Row(
-          children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: List.generate(
-                recentWorks[widget.index].tools.length,
-                (index) => WorkToolIcon(
-                    icon: recentWorks[widget.index].tools[index],
-                    parentSize: widget.parentSize),
-              ),
-            ),
-            Expanded(
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: kDefaultPadding),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      recentWorks[widget.index].category.toUpperCase(),
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: widget.parentSize.width * .011),
-                    ),
-                    const SizedBox(height: kDefaultPadding / 2),
-                    Text(
-                      recentWorks[widget.index].title,
-                      style: TextStyle(
-                          fontWeight: FontWeight.w700,
-                          fontSize: widget.parentSize.width * .02),
-                    ),
-                    const SizedBox(height: kDefaultPadding / 2),
-                    Text(
-                      recentWorks[widget.index].description,
-                      style: TextStyle(
-                          fontFamily: "Hind",
-                          fontWeight: FontWeight.w300,
-                          fontSize: widget.parentSize.width * .01),
-                    ),
-                    const SizedBox(height: kDefaultPadding),
-                    MyOutlineButtonSmall(
-                      size: widget.parentSize,
-                      text: "See More!",
-                      icon: Icons.read_more_outlined,
-                      onPress: () async {
-                        openLink(link: recentWorks[widget.index].link);
-                      },
-                    ),
-                  ],
+    return Container(
+      margin: EdgeInsets.symmetric(
+          horizontal: widget.parentSize.width > 1200
+              ? 0
+              : widget.parentSize.width * 0.1),
+      child: InkWell(
+        onTap: widget.onPress,
+        onHover: (value) {
+          setState(() {
+            isHover = value;
+          });
+        },
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          height: 320,
+          width: 540,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              if (isHover)
+                const BoxShadow(
+                  blurRadius: 30,
+                )
+            ],
+          ),
+          child: Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: List.generate(
+                  recentWorks[widget.index].tools.length,
+                  (index) => WorkToolIcon(
+                      icon: recentWorks[widget.index].tools[index],
+                      parentSize: widget.parentSize),
                 ),
               ),
-            ),
-          ],
+              Expanded(
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: kDefaultPadding),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        recentWorks[widget.index].category.toUpperCase(),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w500,
+                            fontSize: widget.parentSize.width > 1200
+                                ? widget.parentSize.width * .011
+                                : widget.parentSize.width * 0.025),
+                      ),
+                      const SizedBox(height: kDefaultPadding / 2),
+                      Text(
+                        recentWorks[widget.index].title,
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: widget.parentSize.width > 1200
+                                ? widget.parentSize.width * .011
+                                : widget.parentSize.width * 0.04),
+                      ),
+                      const SizedBox(height: kDefaultPadding / 2),
+                      Text(
+                        recentWorks[widget.index].description,
+                        style: TextStyle(
+                            fontFamily: "Hind",
+                            fontWeight: FontWeight.w300,
+                            fontSize: widget.parentSize.width > 1200
+                                ? widget.parentSize.width * .01
+                                : widget.parentSize.width * 0.025),
+                      ),
+                      const SizedBox(height: kDefaultPadding),
+                      MyOutlineButtonSmall(
+                        size: widget.parentSize,
+                        text: "See More!",
+                        icon: Icons.read_more_outlined,
+                        onPress: () async {
+                          openLink(link: recentWorks[widget.index].link);
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -125,7 +137,9 @@ class WorkToolIcon extends StatelessWidget {
       padding: const EdgeInsets.only(left: kDefaultPadding),
       child: Icon(
         icon,
-        size: parentSize.width * .03,
+        size: parentSize.width > 1200
+            ? parentSize.width * 0.03
+            : parentSize.width * 0.07,
         color: MyColorScheme.middle,
         shadows: [
           BoxShadow(

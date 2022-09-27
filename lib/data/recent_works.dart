@@ -3,6 +3,18 @@ import 'package:portfolio/data/entities/work.dart';
 
 List<Work> recentWorks = [
   Work(
+    category: "Java & Spring",
+    title: "Buds Security",
+    description: "A micro framework for authorization and authentication.\n"
+        "Based on interceptor for the responsibility chain and ThreadLocal to hold user information in the context.\n"
+        "Developed in TDD and in the respect of the clean code guidelines",
+    link: "https://github.com/dmgiangi/buds-security.git",
+    tools: [
+      DevIcons.javaPlain,
+      DevIcons.springPlain,
+    ],
+  ),
+  Work(
     category: "Dart & Flutter",
     title: "Portfolio",
     description: "A simple portfolio made with flutter3.0 and dart (this)",

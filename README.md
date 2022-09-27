@@ -4,13 +4,15 @@ A simple portfolio made with flutter3.0 and dart
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+to use this portfolio git clone this project.
 
-A few resources to get you started if this is your first Flutter project:
+then edit:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- file found in data package,
+- image found in asset folder.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials, samples, guidance on
-mobile development, and a full API reference.
+long last run
+
+```bash
+flutter build web
+```

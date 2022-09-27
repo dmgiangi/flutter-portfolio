@@ -33,8 +33,7 @@ class _KnowledgeCardState extends State<KnowledgeCard> {
       hoverColor: Colors.transparent,
       child: AnimatedContainer(
         duration: duration,
-        margin:
-            EdgeInsets.all(kDefaultPadding * widget.parentSize.width * 0.0013),
+        margin: EdgeInsets.all(widget.parentSize.width * 0.02),
         decoration: BoxDecoration(
           color: knowledge[widget.index].color[100],
           borderRadius: BorderRadius.circular(10),
@@ -52,8 +51,6 @@ class _KnowledgeCardState extends State<KnowledgeCard> {
           children: [
             AnimatedContainer(
               duration: duration,
-              //padding: EdgeInsets.all(
-              //  kDefaultPadding * widget.parentSize.width * 0.001),
               decoration: BoxDecoration(
                 color: Colors.white,
                 shape: BoxShape.circle,
@@ -73,10 +70,13 @@ class _KnowledgeCardState extends State<KnowledgeCard> {
                 ],
               ),
               child: Padding(
-                padding: const EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(
+                    widget.parentSize.width > 1200 ? 15.0 : 10.0),
                 child: Icon(
                   knowledge[widget.index].icon,
-                  size: widget.parentSize.width * 0.03,
+                  size: widget.parentSize.width > 1200
+                      ? widget.parentSize.width * 0.035
+                      : widget.parentSize.width * 0.07,
                   color: MyColorScheme.dark,
                 ),
               ),
@@ -86,7 +86,9 @@ class _KnowledgeCardState extends State<KnowledgeCard> {
               knowledge[widget.index].title,
               style: TextStyle(
                   fontWeight: FontWeight.w500,
-                  fontSize: widget.parentSize.width * 0.015,
+                  fontSize: widget.parentSize.width > 1200
+                      ? widget.parentSize.width * 0.015
+                      : widget.parentSize.width * 0.03,
                   color: MyColorScheme.dark),
             ),
           ],

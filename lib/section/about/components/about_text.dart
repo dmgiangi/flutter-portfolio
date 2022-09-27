@@ -20,7 +20,7 @@ class AboutText extends StatelessWidget {
         style: TextStyle(
           fontFamily: "Hind",
           fontWeight: FontWeight.w300,
-          fontSize: size.width * .01,
+          fontSize: size.width > 1200 ? size.width * 0.01 : size.width * 0.02,
           color: MyColorScheme.black,
         ),
       ),

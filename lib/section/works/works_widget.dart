@@ -49,7 +49,7 @@ class WorksWidget extends StatelessWidget {
               ),
               const SizedBox(height: kDefaultPadding * 2),
               GridView.count(
-                crossAxisCount: 2,
+                crossAxisCount: size.width > 1200 ? 2 : 1,
                 crossAxisSpacing: kDefaultPadding * 4,
                 mainAxisSpacing: kDefaultPadding * 4,
                 shrinkWrap: true,

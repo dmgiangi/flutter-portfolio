@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants/constants.dart';
 import 'package:portfolio/data/data.dart';
 import 'package:portfolio/html_services.dart';
-import 'package:portfolio/section/about/components/about_and_sign.dart';
 import 'package:portfolio/section/about/components/about_text.dart';
 import 'package:portfolio/section/about/components/years_of_experience_card.dart';
 
 import '../../components/my_outline_button.dart';
+import '../../components/section_title.dart';
 
 class About extends StatelessWidget {
   const About({
@@ -32,10 +32,17 @@ class About extends StatelessWidget {
         width: size.width > 1200 ? 1200 : size.width,
         child: Column(
           children: [
+            SectionTitle(
+              size: size,
+              subTitle: "My story",
+              title: "About Me",
+            ),
+            const SizedBox(
+              height: kDefaultPadding * 2,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                AboutAndSign(size: size),
                 AboutText(
                   size: size,
                   text: kAboutText,

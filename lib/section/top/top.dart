@@ -36,7 +36,9 @@ class Top extends StatelessWidget {
               right: size.width > 1200 ? size.width * 0.1 : 3,
               child: Container(
                 constraints: BoxConstraints(
-                    maxWidth: size.width * .9, maxHeight: size.height * .9),
+                  maxWidth:
+                      size.width > 1200 ? size.width * .8 : size.width * .7,
+                ),
                 child: Image.asset("assets/images/photo.png"),
               ),
             ),

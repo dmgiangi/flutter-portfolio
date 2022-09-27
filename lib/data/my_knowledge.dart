@@ -54,9 +54,4 @@ List<Knowledge> knowledge = [
     icon: DevIcons.githubOriginal,
     color: Colors.redAccent,
   ),
-  Knowledge(
-    title: "Docker",
-    icon: DevIcons.dockerPlain,
-    color: Colors.blue,
-  ),
 ];
