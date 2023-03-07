@@ -1,6 +1,7 @@
 # portfolio
 
-A simple portfolio made with flutter 3.0 and dart
+A simple portfolio made with flutter 3.0 and dart.\
+You can see the result on [**HERE!**](https://dmgiangi.dev)
 
 ## Getting Started
 
@@ -76,7 +77,7 @@ networks:
     external: true
 ```
 
-with:
+run with:
 
 ```shell
 docker compose up -d
@@ -134,7 +135,7 @@ networks:
     external: true
 ```
 
-with:
+run with:
 
 ```shell
 docker compose up -d
