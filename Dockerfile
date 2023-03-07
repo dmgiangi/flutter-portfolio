@@ -1,3 +1,4 @@
-FROM nginx:1.23.3
+ARG ARCH
+FROM ${ARCH}/nginx:1.23.3
 COPY build/web /usr/share/nginx/html
 CMD ["nginx", "-g", "daemon off;"]

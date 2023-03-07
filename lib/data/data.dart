@@ -23,4 +23,4 @@ String kYearsOfExperience =
     _yearsOfExperience < 10 ? "0$_yearsOfExperience" : "$_yearsOfExperience";
 
 //CV link
-const cvLink = "https://dmgiangi.dev/curriculum/Gianluigi-De-Marco_CV.pdf";
+const cvLink = "https://dmgiangi.dev/curriculum/curriculum.pdf";
