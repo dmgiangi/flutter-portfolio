@@ -33,11 +33,10 @@ class Top extends StatelessWidget {
             GlassContent(size: size),
             Positioned(
               bottom: 00,
-              right: size.width > 1200 ? size.width * 0.1 : 3,
+              right: size.width > 1200 ? 1200 * 0.1 : 3,
               child: Container(
                 constraints: BoxConstraints(
-                  maxWidth:
-                      size.width > 1200 ? size.width * .8 : size.width * .7,
+                  maxWidth: size.width > 1200 ? 1200 * .8 : size.width * .7,
                 ),
                 child: Image.asset("assets/images/photo.png"),
               ),

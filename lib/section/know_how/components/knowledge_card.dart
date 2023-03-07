@@ -75,7 +75,7 @@ class _KnowledgeCardState extends State<KnowledgeCard> {
                 child: Icon(
                   knowledge[widget.index].icon,
                   size: widget.parentSize.width > 1200
-                      ? widget.parentSize.width * 0.035
+                      ? 1200 * 0.035
                       : widget.parentSize.width * 0.07,
                   color: MyColorScheme.dark,
                 ),
@@ -87,7 +87,7 @@ class _KnowledgeCardState extends State<KnowledgeCard> {
               style: TextStyle(
                   fontWeight: FontWeight.w500,
                   fontSize: widget.parentSize.width > 1200
-                      ? widget.parentSize.width * 0.015
+                      ? 1200 * 0.015
                       : widget.parentSize.width * 0.03,
                   color: MyColorScheme.dark),
             ),

@@ -21,8 +21,7 @@ class AboutAndSign extends StatelessWidget {
             "About\nmy story",
             style: TextStyle(
               fontWeight: FontWeight.w700,
-              fontSize:
-                  size.width > 1200 ? size.width * 0.025 : size.width * .04,
+              fontSize: size.width > 1200 ? 1200 * 0.025 : size.width * .04,
               color: MyColorScheme.black,
             ),
           ),

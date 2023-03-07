@@ -48,9 +48,7 @@ class HireMeCard extends StatelessWidget {
                 Text(
                   "Starting New Project?",
                   style: TextStyle(
-                      fontSize: size.width > 1200
-                          ? size.width * 0.02
-                          : size.width * 0.04,
+                      fontSize: size.width > 1200 ? 1200 * 0.02 : size.width * 0.04,
                       fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(height: kDefaultPadding / 2),
@@ -59,9 +57,7 @@ class HireMeCard extends StatelessWidget {
                   style: TextStyle(
                       fontFamily: "Hind",
                       fontWeight: FontWeight.w200,
-                      fontSize: size.width > 1200
-                          ? size.width * 0.015
-                          : size.width * 0.02),
+                      fontSize: size.width > 1200 ? 1200 * 0.015 : size.width * 0.02),
                 )
               ],
             ),

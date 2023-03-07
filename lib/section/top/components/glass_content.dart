@@ -39,14 +39,14 @@ class GlassContent extends StatelessWidget {
                 "Welcome in the portfolio of",
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
-                  fontSize: size.width * .02,
+                  fontSize: size.width > 1200 ? 1200 * .02 : size.width * 0.2,
                   color: MyColorScheme.background,
                 ),
               ),
               Text(
                 "$kName\n$kSurname",
                 style: TextStyle(
-                  fontSize: size.width * .05,
+                  fontSize: size.width > 1200 ? 1200 * .05 : size.width * 0.05,
                   fontWeight: FontWeight.bold,
                   height: 1.3,
                   color: MyColorScheme.background,
@@ -61,7 +61,8 @@ class GlassContent extends StatelessWidget {
                   DefaultTextStyle(
                     style: TextStyle(
                       fontFamily: "Montserrat",
-                      fontSize: size.width * .025,
+                      fontSize:
+                          size.width > 1200 ? 1200 * .025 : size.width * 0.025,
                       color: MyColorScheme.background,
                     ),
                     child: AnimatedTextKit(

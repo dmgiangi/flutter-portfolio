@@ -66,7 +66,7 @@ class _SocialCardState extends State<SocialCard> {
                 widget.name,
                 style: TextStyle(
                   fontSize: widget.size.width > 1200
-                      ? widget.size.width * 0.014
+                      ? 1200 * 0.014
                       : widget.size.width * 0.028,
                   color: MyColorScheme.dark,
                   fontWeight: FontWeight.w500,

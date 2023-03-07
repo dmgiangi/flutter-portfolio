@@ -38,3 +38,4 @@ app.*.map.json
 # Android Studio will place build artifacts here
 android/
 web/
+assets/.env

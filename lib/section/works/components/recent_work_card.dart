@@ -78,7 +78,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                         style: TextStyle(
                             fontWeight: FontWeight.w500,
                             fontSize: widget.parentSize.width > 1200
-                                ? widget.parentSize.width * .011
+                                ? 1200 * .02
                                 : widget.parentSize.width * 0.025),
                       ),
                       const SizedBox(height: kDefaultPadding / 2),
@@ -87,7 +87,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                         style: TextStyle(
                             fontWeight: FontWeight.w700,
                             fontSize: widget.parentSize.width > 1200
-                                ? widget.parentSize.width * .011
+                                ? 1200 * .018
                                 : widget.parentSize.width * 0.04),
                       ),
                       const SizedBox(height: kDefaultPadding / 2),
@@ -97,7 +97,7 @@ class _RecentWorkCardState extends State<RecentWorkCard> {
                             fontFamily: "Hind",
                             fontWeight: FontWeight.w300,
                             fontSize: widget.parentSize.width > 1200
-                                ? widget.parentSize.width * .01
+                                ? 1200 * .013
                                 : widget.parentSize.width * 0.025),
                       ),
                       const SizedBox(height: kDefaultPadding),
@@ -137,9 +137,7 @@ class WorkToolIcon extends StatelessWidget {
       padding: const EdgeInsets.only(left: kDefaultPadding),
       child: Icon(
         icon,
-        size: parentSize.width > 1200
-            ? parentSize.width * 0.03
-            : parentSize.width * 0.07,
+        size: parentSize.width > 1200 ? 1200 * 0.03 : parentSize.width * 0.07,
         color: MyColorScheme.middle,
         shadows: [
           BoxShadow(

@@ -22,7 +22,7 @@ class SectionTitle extends StatelessWidget {
           margin: const EdgeInsets.only(right: kDefaultPadding / 2),
           padding: const EdgeInsets.only(bottom: 72),
           width: 8,
-          height: size.width > 1200 ? size.width * 0.055 : size.width * 0.11,
+          height: size.width > 1200 ? 1200 * 0.055 : size.width * 0.11,
           color: MyColorScheme.black,
           child: const DecoratedBox(
             decoration: BoxDecoration(
@@ -39,8 +39,7 @@ class SectionTitle extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w200,
                 color: MyColorScheme.black,
-                fontSize:
-                    size.width > 1200 ? size.width * 0.01 : size.width * 0.02,
+                fontSize: size.width > 1200 ? 1200 * 0.01 : size.width * 0.02,
               ),
             ),
             Text(
@@ -48,8 +47,7 @@ class SectionTitle extends StatelessWidget {
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 color: MyColorScheme.black,
-                fontSize:
-                    size.width > 1200 ? size.width * 0.03 : size.width * 0.06,
+                fontSize: size.width > 1200 ? 1200 * 0.03 : size.width * 0.06,
               ),
             )
           ],

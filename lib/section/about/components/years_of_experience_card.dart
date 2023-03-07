@@ -76,9 +76,7 @@ class YearsOfExperienceCard extends StatelessWidget {
                 "Years of Experience",
                 style: TextStyle(
                     fontWeight: FontWeight.w400,
-                    fontSize: size.width > 1200
-                        ? size.width * .009
-                        : size.width * 0.018,
+                    fontSize: size.width > 1200 ? 1200 * .009 : size.width * 0.018,
                     color: MyColorScheme.background),
               ),
             ],

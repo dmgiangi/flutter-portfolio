@@ -63,7 +63,7 @@ class _MenuState extends State<Menu> {
               fontFamily: "Montserrat",
               color: MyColorScheme.dark,
               fontSize: MediaQuery.of(context).size.width > 1200
-                  ? MediaQuery.of(context).size.width * 0.02
+                  ? 1200 * 0.02
                   : MediaQuery.of(context).size.width * 0.030,
               fontWeight: selectedIndex == index
                   ? FontWeight.w700
